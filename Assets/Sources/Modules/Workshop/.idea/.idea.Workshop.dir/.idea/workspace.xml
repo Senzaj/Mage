@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="775a2d8c-587e-4ad1-ab67-0df6c6ce24ff" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Player/MVP/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Player/MVP/PlayerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Player/MVP/PlayerPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Player/MVP/PlayerPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Player/MVP/PlayerSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Player/MVP/PlayerSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Player/MVP/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Player/MVP/PlayerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Player/Player.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/../Player/Player.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Player/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Player/UI/UpgradePanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Player/UI/UpgradePanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/InGame/HealthBar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/InGame/HealthBar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/InGame/WaveIndicatorBar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/InGame/WaveIndicatorBar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/UI.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/UI.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/Workshop.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/Workshop/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/Workshop/Prefabs/UpgradeSlot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/Workshop/Prefabs/UpgradeSlot.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/Workshop/WorkshopMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/Workshop/WorkshopMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wallet/MVP/WalletModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Wallet/MVP/WalletModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wallet/MVP/WalletPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Wallet/MVP/WalletPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wallet/MVP/WalletSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Wallet/MVP/WalletSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wallet/MVP/WalletView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Wallet/MVP/WalletView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wallet/Wallet.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/../Wallet/Wallet.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workshop.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Workshop.asmdef" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2U6gqOyTnUcrUaGvrR7JDHCtmXn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "SolutionBuilderGeneralOptionsPage",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="775a2d8c-587e-4ad1-ab67-0df6c6ce24ff" name="Changes" comment="" />
+      <created>1692265635691</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692265635691</updated>
+      <workItem from="1692265640019" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

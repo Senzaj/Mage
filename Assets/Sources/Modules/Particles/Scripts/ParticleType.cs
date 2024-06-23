@@ -1,0 +1,38 @@
+namespace Sources.Modules.Particles.Scripts
+{
+    public enum ParticleType 
+    {
+        MageDamaged,
+        MageDied,
+        SmallDemonDied,
+        MedDemonDied,
+        BigDemonDied,
+        SmallOrcDied,
+        MedOrcDied,
+        BigOrcDied,
+        SmallUndeadDied,
+        MedUndeadDied,
+        BigUndeadDied,
+        Other1Died,
+        Other2Died,
+        Other3Died,
+        SpellCast,
+        SnowBall,
+        FireStrike,
+        LostSpirit,
+        IcePeak,
+        FireArrow,
+        MudArrow,
+        ElectricArrow,
+        DeathBearer,
+        PureArrow,
+        AbsoluteVoidDamage,
+        AbsoluteVoidDestroy,
+        MightyPushDamage,
+        MightyPushDestroy,
+        Necron,
+        FireBall,
+        PoisonSphereDamage,
+        PoisonSphereDestroy
+    }
+}

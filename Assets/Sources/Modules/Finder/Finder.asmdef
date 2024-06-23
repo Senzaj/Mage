@@ -1,0 +1,17 @@
+{
+    "name": "Finder",
+    "rootNamespace": "",
+    "references": [
+        "GUID:40909cc57c2e6914ba070aa441e87b34",
+        "GUID:797b9584909357f44ad9c33f6bd88314"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

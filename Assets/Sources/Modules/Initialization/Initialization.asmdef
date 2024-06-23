@@ -1,0 +1,24 @@
+{
+    "name": "Initialization",
+    "rootNamespace": "",
+    "references": [
+        "GUID:027b80df10cafa04f879b63ffb271b66",
+        "GUID:21f8c4f9c62abc742a060ff0bf112870",
+        "GUID:ed1b6a14d15c6e3428bc7b215f0ecf92",
+        "GUID:e3894dde210761b418b8ad61c61690d5",
+        "GUID:797b9584909357f44ad9c33f6bd88314",
+        "GUID:ef7e0e3eb213f324c87b70a782844fb6",
+        "GUID:dd54c311aca11134bb260add876b2d09",
+        "GUID:b50cddd5960da184bb9cf5fa02f43064",
+        "GUID:82ad594db3771e74bbcc682a1cd26eee"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

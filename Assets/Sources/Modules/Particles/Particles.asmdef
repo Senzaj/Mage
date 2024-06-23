@@ -1,0 +1,16 @@
+{
+    "name": "Particles",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9b65cb743cca2ee49b4a06f107a2482b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
