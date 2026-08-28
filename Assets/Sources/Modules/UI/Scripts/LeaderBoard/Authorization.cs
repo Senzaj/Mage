@@ -22,7 +22,6 @@ namespace Sources.Modules.UI.Scripts.LeaderBoard
 
         private void OnAcceptButtonClick()
         {
-            _yandex.OnAuthorizeButtonClick();
             GetComponent<Panel>().TurnOff();
         }
     }

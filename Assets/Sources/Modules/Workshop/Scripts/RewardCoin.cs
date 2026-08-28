@@ -24,7 +24,7 @@ namespace Sources.Modules.Workshop.Scripts
 
         public event Action<int, int> RewardButtonClicked;
         public event Action<int> Rewarded;
-    
+
         private void Awake()
         {
             _button = GetComponent<Button>();
@@ -44,16 +44,13 @@ namespace Sources.Modules.Workshop.Scripts
         {
             Rewarded?.Invoke(rewardCoins);
         }
-        
+
         private void OnButtonClick()
         {
             if (_trainingView.isActiveAndEnabled)
                 return;
-            
-            if (_yandex.IsInitialized)
-                _yandex.ShowVideo(OnRewarded);
-            else
-                OnRewarded();
+
+            OnRewarded();
         }
 
         private void OnRewarded()
@@ -77,7 +74,7 @@ namespace Sources.Modules.Workshop.Scripts
                 randomCoins = Random.Range(MinCoins, EasyCoins);
                 chestAnimIndex = 0;
             }
-            
+
             RewardButtonClicked?.Invoke(randomCoins, chestAnimIndex);
         }
     }

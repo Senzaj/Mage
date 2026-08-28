@@ -31,7 +31,7 @@ namespace Sources.Modules.Player.Scripts.UI
         private void OnDisable()
         {
             _mage.Died -= _panel.TurnOn;
-            
+
             _restartButton.onClick.RemoveListener(OnRestartButtonClick);
             _rewardButton.onClick.RemoveListener(OnRewardButtonClick);
         }
@@ -49,10 +49,7 @@ namespace Sources.Modules.Player.Scripts.UI
 
         private void OnRewardButtonClick()
         {
-            if (_yandex.IsInitialized)
-                _yandex.ShowVideo(OnRewarded);
-            else
-                OnRewarded();
+            OnRewarded();
         }
 
         private void OnRewarded()

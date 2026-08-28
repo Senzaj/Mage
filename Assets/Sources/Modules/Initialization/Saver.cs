@@ -1,5 +1,4 @@
 ﻿using System;
-using Agava.YandexGames;
 using Sources.Modules.Player.Scripts;
 using Sources.Modules.Training.Scripts;
 using Sources.Modules.UI.Scripts;
@@ -12,6 +11,8 @@ namespace Sources.Modules.Initialization
 {
     public class Saver
     {
+        private const string SaveKey = "Mage.SaveData";
+
         private static Saver s_instance;
         private WaveSaver _wave = new();
         private WorkShopSaver _workShop = new();
@@ -19,7 +20,7 @@ namespace Sources.Modules.Initialization
         private TrainingSaver _training = new();
         private PlayerSaver _player = new();
         private VolumeSaver _volume = new();
-        
+
         private AllDates _allDates;
         private event Action OnLoaded;
 
@@ -31,11 +32,9 @@ namespace Sources.Modules.Initialization
             onLoaded.Invoke();
             return;
 #endif
-            
+
             if (s_instance == null)
             {
-                TryLoad();
-                
                 s_instance = this;
                 OnLoaded = onLoaded;
                 _wave.RequestSave += OnRequestSave;
@@ -44,6 +43,8 @@ namespace Sources.Modules.Initialization
                 _training.RequestSave += OnRequestSave;
                 _player.RequestSave += OnRequestSave;
                 _volume.RequestSave += OnRequestSave;
+
+                TryLoad();
             }
             else
             {
@@ -51,7 +52,11 @@ namespace Sources.Modules.Initialization
             }
         }
 
-        private void TryLoad() => PlayerAccount.GetCloudSaveData(onSuccessCallback: Load);
+        private void TryLoad()
+        {
+            string json = PlayerPrefs.GetString(SaveKey, JsonUtility.ToJson(new AllDates()));
+            Load(json);
+        }
 
         private void Load(string json)
         {
@@ -62,7 +67,7 @@ namespace Sources.Modules.Initialization
             _training.Init(_allDates.Training);
             _player.Init(_allDates.Player);
             _volume.Init(_allDates.Volume);
-            
+
             OnLoaded?.Invoke();
         }
 
@@ -99,11 +104,8 @@ namespace Sources.Modules.Initialization
 
         private void Save()
         {
-            #if !UNITY_WEBGL || UNITY_EDITOR
-            return;
-            #endif
-            
-            PlayerAccount.SetCloudSaveData(JsonUtility.ToJson(_allDates));
+            PlayerPrefs.SetString(SaveKey, JsonUtility.ToJson(_allDates));
+            PlayerPrefs.Save();
         }
     }
 }

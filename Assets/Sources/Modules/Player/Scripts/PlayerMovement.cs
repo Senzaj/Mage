@@ -1,5 +1,4 @@
 using System.Collections;
-using Agava.WebUtility;
 using Sources.Modules.Common;
 using Sources.Modules.Player.Scripts.Animation;
 using Sources.Modules.Training.Scripts;
@@ -47,8 +46,8 @@ namespace Sources.Modules.Player.Scripts
             StartIdle();
             return;
 #endif
-            _isMobile = Device.IsMobile;
-            
+            _isMobile = Application.isMobilePlatform;
+
             if (_isMobile)
             {
                 _playerInput.Player.MoveHold.performed += ctx => OnMove();
@@ -72,7 +71,7 @@ namespace Sources.Modules.Player.Scripts
                 _joystick.gameObject.SetActive(false);
                 _playerInput.Player.Move.performed += ctx => OnMove();
             }
-            
+
             StartIdle();
         }
 
@@ -94,7 +93,7 @@ namespace Sources.Modules.Player.Scripts
         {
             _speed = speed;
         }
-        
+
         private void OnRequestEnableInput()
         {
             if (_isMobile)
@@ -106,7 +105,7 @@ namespace Sources.Modules.Player.Scripts
                 _playerInput.Enable();
             }
         }
-        
+
         private void OnRequestDisableInput()
         {
             if (_isMobile)
@@ -152,14 +151,14 @@ namespace Sources.Modules.Player.Scripts
 
             SetMoveDirectionPhone();
             _animator.Play(PlayerAnimator.States.Run);
-            
+
             while (CanMovePhone)
             {
                 _rigidbody2D.velocity = _speed * _moveDirectionPhone;
                 _flipper.TryFlip(_rigidbody2D.velocity.x);
-                
+
                 SetMoveDirectionPhone();
-                
+
                 yield return null;
             }
 
@@ -171,10 +170,10 @@ namespace Sources.Modules.Player.Scripts
         {
             if (_idleWork != null)
                 StopCoroutine(_idleWork);
-            
+
             _idleWork = StartCoroutine(_isMobile ? IdlePhone() : IdlePc());
         }
-        
+
         private IEnumerator IdlePhone()
         {
             WaitForSeconds waitForSeconds = new(IdleTick);

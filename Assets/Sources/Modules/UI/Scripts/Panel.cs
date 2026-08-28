@@ -1,5 +1,4 @@
 using System;
-using Agava.YandexGames;
 using Sources.Modules.Common;
 using Sources.Modules.Training.Scripts;
 using Sources.Modules.UI.Scripts.LeaderBoard;
@@ -23,10 +22,10 @@ namespace Sources.Modules.UI.Scripts
         [SerializeField] private Button _closeButton;
         [SerializeField] private Button _openButton;
         [SerializeField] private TrainingView _trainingView;
-        
+
         private bool _canClose = true;
         private bool _canShowInterstitial;
-        
+
         public event Action<Panel> Enabled;
         public event Action<Panel> Disabled;
 
@@ -36,7 +35,7 @@ namespace Sources.Modules.UI.Scripts
         public bool IsEnabled => _isEnabled;
         public bool IsLeaderboard => _isLeaderboard;
         public bool IsAuthorization => _isAuthorization;
-        
+
         private void OnEnable()
         {
             if (_isWorkshop)
@@ -47,7 +46,7 @@ namespace Sources.Modules.UI.Scripts
 
             if (_closeButton != null)
                 _closeButton.onClick.AddListener(TurnOff);
-            
+
             if (_openButton != null)
                 _openButton.onClick.AddListener(TurnOn);
         }
@@ -62,7 +61,7 @@ namespace Sources.Modules.UI.Scripts
 
             if (_closeButton != null)
                 _closeButton.onClick.RemoveListener(TurnOff);
-            
+
             if (_openButton != null)
                 _openButton.onClick.RemoveListener(TurnOn);
         }
@@ -78,12 +77,12 @@ namespace Sources.Modules.UI.Scripts
             ShowCanvas();
             Enabled?.Invoke(this);
         }
-        
+
         public void TurnOnWithoutInvoke()
         {
             ShowCanvas();
         }
-        
+
         public void TurnOff()
         {
             if (_isWorkshop)
@@ -104,7 +103,7 @@ namespace Sources.Modules.UI.Scripts
                 Disabled?.Invoke(this);
             }
         }
-        
+
         public void TurnOffWithoutInvoke()
         {
             HideCanvas();
@@ -125,14 +124,14 @@ namespace Sources.Modules.UI.Scripts
             _canvasGroup.alpha = 1;
             _canvasGroup.interactable = true;
             _canvasGroup.blocksRaycasts = true;
-            
+
             if (_isPausePanel)
                 _time.PanelPause();
 
-            if (_yandex.IsInitialized && _isLeaderboard && PlayerAccount.IsAuthorized)
+            if (_isLeaderboard)
             {
                 LeaderList leaderboard = GetComponent<LeaderList>();
-                leaderboard.ShowResults();
+                leaderboard?.ShowResults();
             }
         }
 
@@ -142,19 +141,17 @@ namespace Sources.Modules.UI.Scripts
             _canvasGroup.alpha = 0;
             _canvasGroup.interactable = false;
             _canvasGroup.blocksRaycasts = false;
-            
+
             if (_isPausePanel)
                 _time.PanelPlay();
 
-            if (_canShowInterstitial && _yandex.IsInitialized && _isWorkshop)
-                _yandex.ShowInterstitial();
-            else if (_canShowInterstitial == false && _isWorkshop)
+            if (_canShowInterstitial == false && _isWorkshop)
                 _canShowInterstitial = true;
 
-            if (_yandex.IsInitialized && _isLeaderboard && PlayerAccount.IsAuthorized)
+            if (_isLeaderboard)
             {
                 LeaderList leaderboard = GetComponent<LeaderList>();
-                leaderboard.Clear();
+                leaderboard?.Clear();
             }
         }
     }
